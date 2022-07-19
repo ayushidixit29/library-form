@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>book</title>
+</head>
+<body>
+     <div class="tbl-header">
+<h2>Showing the list of Book</h2>
+    <table  cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <th>BOOK NAME</th>
+            <th>NO COPIES</th>
+			<th> AUTHOR NAME</th>
+            
+        </tr>        
+        {{#each userData}}
+        
+        <tr>            
+            <td>{{bname}}</td>
+            <td>{{ncopy}}</td>
+            <td>{{aname}}</td>
+			<td>
+                <a href="/delete/{{id}}">Delete</a>
+			</td>
+            
+        </tr>
+        {{/each}}
+    </table>
+    
+    </div>
+</body>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+  border: 1px solid;
+}
+</style>
+
+</html>
